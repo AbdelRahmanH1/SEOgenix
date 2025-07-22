@@ -4,4 +4,8 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://localhost:27017/seo
+      uri: ${MONGO_URI}
+    redis:
+      host: ${REDIS_URL}
+      port: ${REDIS_PORT}
+      connect-timeout: 60000
