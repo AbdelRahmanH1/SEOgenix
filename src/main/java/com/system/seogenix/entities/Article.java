@@ -1,5 +1,7 @@
 package com.system.seogenix.entities;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
@@ -9,7 +11,7 @@ import java.util.Date;
 import java.util.List;
 
 
-@Document(collation = "articles")
+@Document(collection = "articles")
 @Getter
 @Setter
 public class Article {
@@ -17,9 +19,9 @@ public class Article {
     @Id
     private String id;
 
-
+    @NotBlank
+    @Size(min=5)
     private String title;
-    private String content;
     private List<String> tags;
     private Date createdAt = new Date();
 }
