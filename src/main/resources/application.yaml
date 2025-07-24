@@ -9,3 +9,6 @@ spring:
       host: ${REDIS_URL}
       port: ${REDIS_PORT}
       connect-timeout: 60000
+
+  openAI:
+    key: ${OPEN_ROUTER_KEY}
