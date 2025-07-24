@@ -10,5 +10,8 @@ spring:
       port: ${REDIS_PORT}
       connect-timeout: 60000
 
-  openAI:
+  openai:
     key: ${OPEN_ROUTER_KEY}
+  web:
+    resources:
+      add-mappings: false
